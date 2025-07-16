@@ -2,7 +2,7 @@ const { reporter, flow } = require('pactum');
 const pf = require('pactum-flow-plugin');
 
 function addFlowReporter() {
-  pf.config.url = 'http://localhost:8080'; // pactum flow server url
+  pf.config.url = 'http://localhost:8080';
   pf.config.projectId = 'lojaebac-api';
   pf.config.projectName = 'Loja EBAC API';
   pf.config.version = '1.0.0';
@@ -11,12 +11,12 @@ function addFlowReporter() {
   reporter.add(pf.reporter);
 }
 
-// global before
+
 before(async () => {
   addFlowReporter();
 });
 
-// global after
+
 after(async () => {
   await reporter.end();
 });

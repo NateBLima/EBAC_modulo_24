@@ -1,4 +1,3 @@
-// test.js
 const { spec, request } = require('pactum');
 const { eachLike, like } = require('pactum-matchers');
 

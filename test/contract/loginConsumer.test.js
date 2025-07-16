@@ -3,7 +3,7 @@ const pf = require('pactum-flow-plugin');
 const { like } = require('pactum-matchers');
 
 function addFlowReporter() {
-    pf.config.url = 'http://localhost:8080'; // pactum flow server url
+    pf.config.url = 'http://localhost:8080';
     pf.config.projectId = 'lojaebac-front';
     pf.config.projectName = 'Loja EBAC Front';
     pf.config.version = '1.0.3';
@@ -12,13 +12,13 @@ function addFlowReporter() {
     reporter.add(pf.reporter);
 }
 
-// global before
+
 before(async () => {
     addFlowReporter();
     await mock.start(4000);
 });
 
-// global after
+
 after(async () => {
     await mock.stop();
     await reporter.end();

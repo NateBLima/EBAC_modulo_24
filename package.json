@@ -11,7 +11,7 @@
     "test:contractConsumer": "mocha ./test/contract/loginConsumer.test.js"
   },
   "keywords": [],
-  "author": "ernestosbarbosa",
+  "author": "NathanBLima",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^10.3.0",
